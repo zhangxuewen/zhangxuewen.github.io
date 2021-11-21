@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>java启动性能优化 | 前行者的博客</title><meta name="keywords" content="IT,JAVA,"><meta name="author" content="前行者"><meta name="copyright" content="前行者"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="no-referrer"><meta name="description" content="JIT 的 Profile 神器 JITWatchhttps:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;1r2NtTgsI63G_ICJMx6XxQ​ 作者：kelthuzadx链接：https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;478887438&#x2F;answer&#x2F;2054092011来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 AOT 编译即 ja">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java启动性能优化">
+<meta property="og:url" content="http://54creator.cn/2021/09/24/yuque/java%E5%90%AF%E5%8A%A8%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/index.html">
+<meta property="og:site_name" content="前行者的博客">
+<meta property="og:description" content="JIT 的 Profile 神器 JITWatchhttps:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;1r2NtTgsI63G_ICJMx6XxQ​ 作者：kelthuzadx链接：https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;478887438&#x2F;answer&#x2F;2054092011来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 AOT 编译即 ja">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-09-24T06:14:08.000Z">
+<meta property="article:modified_time" content="2021-11-18T05:44:27.477Z">
+<meta property="article:author" content="前行者">
+<meta property="article:tag" content="IT,JAVA,">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://54creator.cn/2021/09/24/yuque/java%E5%90%AF%E5%8A%A8%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'java启动性能优化',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-11-18 13:44:27'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 外链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">前行者的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 外链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">java启动性能优化</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-24T06:14:08.000Z" title="发表于 2021-09-24 14:14:08">2021-09-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-11-18T05:44:27.477Z" title="更新于 2021-11-18 13:44:27">2021-11-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="java启动性能优化"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>JIT 的 Profile 神器 JITWatch<br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/1r2NtTgsI63G_ICJMx6XxQ">https://mp.weixin.qq.com/s/1r2NtTgsI63G_ICJMx6XxQ</a><br>​</p>
+<p>作者：kelthuzadx<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/478887438/answer/2054092011">https://www.zhihu.com/question/478887438/answer/2054092011</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>AOT 编译即 jaotc，可以将 Java 代码编成二进制，然后虚拟机直接用这些二进制，而不是在运行时花费时间用 JIT 编译。JDK10 还尝试使用 AOT 背后的 Graal 代替 HotSpot VM 原有的 C2 JIT 编译器。但是它们两个的探索不算成功，首先用的不多，成功实践不多，关于这点可以问问自己有没有听过或者实际用过 jaotc 或者 Graal JIT。<br>其次 Graal 主要是 Oracle Labs 那边做开发，他们有一个<a href="https://link.zhihu.com/?target=https://github.com/oracle/graal">仓库</a>，相当于它们是 JDK 里面的 Graal 和 AOT 的上游，但是它们在 JDK 中的测试挂了没人修，也不太活跃，对 JDK 的代码演进会照成一定的困扰（小道消息可能还有派系斗争。。），基于总总原因，OpenJDK 社区决定在 JDK17 中移除它们，由 Oracle Labs 在独立的仓库中维护。所以，<strong>OpenJDK 社区确实已经彻底放弃基于 Graal 的 AOT 了，</strong>但是彻底放弃 AOT 这个技术本身也不一定，没准哪天就有个基于 C2 的 AOT 呢：P.<br>是不是听起来感觉还有救？反正还有 Oracle Labs 仓库的继续维护，不慌。<br>相关用户还是要慌一下，因为 Oracle Labs 也在它们的主线上<a href="https://link.zhihu.com/?target=https://github.com/oracle/graal/commit/2850e2ea3d47f0ac81a740f4ac48bf0e27135a11">移除了 AOT</a>，我们未来可能要永远告别 jaotc 了。至于 Graal 短时间内肯定还是有的，因为它是 GraalVM 安身立命的基础。<br>但是对于函数计算、Serverless 甚至更广阔的应用场景，快速启动、内存低占用这些仍然是刚需，我们仍然需要解决。<br>—- 探索 1<br>很多应用启动性能 Profiling 显示 JVM 启动慢的主要原因是类的<strong>加载-链接-初始化</strong>这一套，它们占据了启动的绝大部分时间，JVM 本身的启动是非常快的（-Xlog:startuptime)。对于类的三部曲，一个解决方案是<a href="https://link.zhihu.com/?target=http://openjdk.java.net/jeps/310">AppCDS</a>技术，OpenJDK 对它做了很多工作，阿里 JDK 也对快速启动和 AppCDS 做了大量改造（<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/392773209">所以，亲，看机会吗？</a>）<br>回到技术本身。JVM 之所以要加载-链接-初始化一个类，目的是让用户写的一个类 Foo，在虚拟机里面能有个数据结构（即 InstanceKlass）对应，这样虚拟机就可以通过它知道 Foo 实现了哪些接口，父类是谁等等。那么只要 Foo 类的字节码没有变过，我们跑多次应用，最终 JVM 里面的 InstanceKlass 就可以是一样的。这就是 AppCDS 的洞察，它可以让应用先 模拟 跑一次，把 JVM 里面已经走过加载-链接-初始化流程的 InstanceKlass 都存放到 App.jsa 文件里面，第二次 实际 运行时直接使用读 App.jsa，拿到已经准备就绪的 InstanceKlass 直接用，省去了加载-链接的开销。<br>—- 探索 2<br>注意 AppCDS 不能跳过初始化这个过程，这个过程需要另一项依赖 AppCDS 和 G1 的技术，即 Pre-initialization 提前初始化来部分解决。Pre-initialization 是比较前沿的技术，也处于探索期间，最新的工作可以使这个技术适用于非 G1 的垃圾回收器。<br>OpenJDK 还针对 AppCDS 做了非常多的工作，比如 DynamicAppCDS、AppCDS for Lambda/Proxy Classes，就不展开了。<br>—-探索 3<br>除了 VM 上面做功夫之外，Linux CRIU 技术也不容忽视。CRIU 的介绍我就贴一点官网的：CRIU 可以冻结运行中的容器或者某个单独的应用，然后把它的状态保存到磁盘上， 然后下次运行时读取磁盘的数据恢复执行。<strong>理想情况下，</strong>应用程序是无感知的，它不知道被暂停过。<br>OpenJDK 也在积极探索，前一段时间 Azul 的一位开发者（为 macOS M1 提供 JDK 的那个男人）提议成立<a href="https://link.zhihu.com/?target=https://mail.openjdk.java.net/pipermail/discuss/2021-July/005862.html">CRaC 项目</a>（JDK 中需要花费大量努力的方向或者技术探索都会创建一个项目，而不是在主线，比如 ZGC，VectorAPI，Valhalla），这个技术旨在探索如何让 CRIU 和 JVM 更好的协作。该项目目前还在广泛讨(che)论(pi)，参与者至少包括 RedHat，Amazon，Azul。对于开发者，等就完事了。<br>—-探索 4<br>再补充一点。<br>OpenJDK 还有一个<a href="https://link.zhihu.com/?target=https://mail.openjdk.java.net/pipermail/announce/2020-May/000289.html">Leyden 项目</a>，探索 static-image 技术，目标也是为了解决上面我们提到的 Java 启动慢、内存高占用等问题。<br>那么 static-image 又是啥呢？假如有个 void foo()方法，用传统的 AOT 如 jatoc，会把 foo 编译成二进制，而 static-image 会把 foo 编译成二进制，<strong>同时</strong>再带上语言运行时（比如 GC、线程模型等），最终得到一个“<strong>闭合的二进制世界</strong>”。static-image 其实就是更广义的 AOT。<br>所以不要悲观，OpenJDK 和 GraalVM 虽然都废弃了传统的 AOT 编译，但是两者都<strong>不约而同</strong>的探索 static-image 技术，OpenJDK 这边是 Leyden，GraalVM 那边是<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/274042223/answer/1270829173">SubstrateVM</a>。不过我得吐槽一下。。Leyden 雷声大雨点小，截至目前(2021.8.12)还没有实际的动静，GraalVM 那边的 SubstrateVM 倒是做的风生水起。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">前行者</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://54creator.cn/2021/09/24/yuque/java%E5%90%AF%E5%8A%A8%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">http://54creator.cn/2021/09/24/yuque/java%E5%90%AF%E5%8A%A8%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://54creator.cn" target="_blank">前行者的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/09/24/yuque/data/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">data</div></div></a></div><div class="next-post pull-right"><a href="/2021/09/16/yuque/%E7%A8%B3%E5%AE%9A%E6%80%A7/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">稳定性</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">前行者</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zhangxuewen" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.yuque.com/54iter/blog" target="_blank" title="Yuque"><i class="fas fa-crow"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/11/18/yuque/java%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA/" title="java的虚拟机"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java的虚拟机"/></a><div class="content"><a class="title" href="/2021/11/18/yuque/java%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA/" title="java的虚拟机">java的虚拟机</a><time datetime="2021-11-18T05:25:59.000Z" title="发表于 2021-11-18 13:25:59">2021-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/12/yuque/%E6%8A%80%E6%9C%AF/" title="技术"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="技术"/></a><div class="content"><a class="title" href="/2021/11/12/yuque/%E6%8A%80%E6%9C%AF/" title="技术">技术</a><time datetime="2021-11-12T11:38:39.000Z" title="发表于 2021-11-12 19:38:39">2021-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/08/yuque/%E4%B8%89%E5%A4%A7%E9%9A%BE/" title="三大难"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="三大难"/></a><div class="content"><a class="title" href="/2021/11/08/yuque/%E4%B8%89%E5%A4%A7%E9%9A%BE/" title="三大难">三大难</a><time datetime="2021-11-08T08:45:12.000Z" title="发表于 2021-11-08 16:45:12">2021-11-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/08/yuque/%E5%89%8D%E7%AB%AF/" title="前端"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端"/></a><div class="content"><a class="title" href="/2021/11/08/yuque/%E5%89%8D%E7%AB%AF/" title="前端">前端</a><time datetime="2021-11-08T08:44:52.000Z" title="发表于 2021-11-08 16:44:52">2021-11-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/26/yuque/Java%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%AE%9E%E8%B7%B5/" title="Java即时编译器原理解析及实践"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java即时编译器原理解析及实践"/></a><div class="content"><a class="title" href="/2021/09/26/yuque/Java%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%AE%9E%E8%B7%B5/" title="Java即时编译器原理解析及实践">Java即时编译器原理解析及实践</a><time datetime="2021-09-26T03:40:38.000Z" title="发表于 2021-09-26 11:40:38">2021-09-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 前行者</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
