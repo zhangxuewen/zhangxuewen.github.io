@@ -8,7 +8,7 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "sync": "yuque-hexo sync",
-     "push":"git subtree push --prefix=dist origin gh-pages",
+    "push": "git subtree push --prefix=dist origin gh-pages",
     "clean:yuque": "yuque-hexo clean"
   },
   "hexo": {
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "hexo": "^5.0.0",
+    "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-index": "^2.0.0",

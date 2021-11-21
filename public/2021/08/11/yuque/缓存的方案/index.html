@@ -1,0 +1,556 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GitHub 提交代码时 emoji 表情的使用 | 前行者的博客</title><meta name="keywords" content="Github"><meta name="author" content="前行者"><meta name="copyright" content="前行者"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="no-referrer"><meta name="description" content="执行 &#96;git commit&#96; 时使用 emoji 为本次提交打上一个 “标签”， 使得此次 commit 的主要工作得到凸现，提高阅读体验，同时也能够当作标签功能使得其在整个提交历史中易于区分与查找。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub 提交代码时 emoji 表情的使用">
+<meta property="og:url" content="http://54creator.cn/2021/08/11/yuque/%E7%BC%93%E5%AD%98%E7%9A%84%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:site_name" content="前行者的博客">
+<meta property="og:description" content="执行 &#96;git commit&#96; 时使用 emoji 为本次提交打上一个 “标签”， 使得此次 commit 的主要工作得到凸现，提高阅读体验，同时也能够当作标签功能使得其在整个提交历史中易于区分与查找。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://b3logfile.com/siyuan/1610205759005/assets/image-20211004232022-yqx105q.png">
+<meta property="article:published_time" content="2021-08-11T14:01:46.000Z">
+<meta property="article:modified_time" content="2021-11-18T05:54:10.181Z">
+<meta property="article:author" content="前行者">
+<meta property="article:tag" content="Github">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://b3logfile.com/siyuan/1610205759005/assets/image-20211004232022-yqx105q.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://54creator.cn/2021/08/11/yuque/%E7%BC%93%E5%AD%98%E7%9A%84%E6%96%B9%E6%A1%88/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'GitHub 提交代码时 emoji 表情的使用',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-11-18 13:54:10'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 外链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://b3logfile.com/siyuan/1610205759005/assets/image-20211004232022-yqx105q.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">前行者的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 外链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">GitHub 提交代码时 emoji 表情的使用</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-11T14:01:46.000Z" title="发表于 2021-08-11 22:01:46">2021-08-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-11-18T05:54:10.181Z" title="更新于 2021-11-18 13:54:10">2021-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%98%E8%85%BE%E8%87%B4%E6%AD%BB/">折腾致死</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="GitHub 提交代码时 emoji 表情的使用"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>🌏Reference</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://gitmoji.dev/?utm_source=ld246.com">gitmoji | An emoji guide for your commit messages</a></li>
+<li><a target="_blank" rel="noopener" href="https://dev.to/javidjms/git-write-better-commits-with-gitmoji-3193">🔨 [git]: Write better commits with Gitmoji - DEV Community</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Kimi-Gao/Program-Blog/issues/71">用 emoji 表情提交代码指南 · Issue #71 · Kimi-Gao/Program-Blog (github.com)</a></li>
+</ul>
+</blockquote>
+<p><img src="https://b3logfile.com/siyuan/1610205759005/assets/image-20210921211205-remwfyi.png"></p>
+<p>一条标准的 git commit 应该为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">type</span>&gt; [scope]: <span class="string">&quot;Message&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>type</strong> must be one of the following mentioned below :</p>
+<ul>
+<li><build>: Build related changes (eg: npm related/ adding external dependencies)</li>
+<li><chore>: A code change that external user won’t see (eg: change to .gitignore)</li>
+<li><docs>: Documentation related changes</li>
+<li><feat>: Introduction of a new feature</li>
+<li><fix>: Resolve an issue directly linked to development (bugfixes)</li>
+<li><hotfix>: Resolve an issue directly linked to production (patches)</li>
+<li><test>: Add/Update test cases</li>
+<li><performance>: Add code that improves performance</li>
+<li><refactor>: Update for code for maintainability (clean code)</li>
+</ul>
+<p><strong>scope</strong> is optional and must be a noun that represents the section of the codebase</p>
+<p><strong>Message</strong> should be imperative and should describe the commit with a clear message/keywords.</p>
+<p>such as</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">feat(home, components): Add login button</span><br><span class="line">feat(home, components): Add login modal</span><br><span class="line">fix(home, components): Resolve issue with modal collapses</span><br><span class="line">chore(home): Move icons folder</span><br><span class="line">feat(newsletter): Add Newsletter component</span><br><span class="line">feat(navbar): Add navbar container</span><br></pre></td></tr></table></figure>
+
+<p>Now we can replace the <type/> with an emoji :</p>
+<p>🎨 Improve structure / format of the code.</p>
+<p>⚡️ Improve performance.</p>
+<p>🔥 Remove code or files.</p>
+<p>🐛 Fix a bug.</p>
+<p>✨ Introduce new features.</p>
+<p>📝 Add or update documentation.</p>
+<p>🚀 Deploy stuff.</p>
+<p>💚 Fix CI Build.</p>
+<p>👷 Add or update CI build system.</p>
+<p>🔧 Add or update configuration files.</p>
+<p>🔨 Add or update development scripts.</p>
+<p>⚰️ Remove dead code.</p>
+<p>Example of commits :</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">✨ (home, components): Add login button</span><br><span class="line">✨ (home, components): Add login modal</span><br><span class="line">🐛 (home, components): Resolve issue with modal collapses</span><br><span class="line">🚚 (home): Move icons folder</span><br><span class="line">✨ (newsletter): Add Newsletter component</span><br><span class="line">✨ (navbar): Add navbar container</span><br><span class="line">🔥 (navbar): Remove old navbar file</span><br><span class="line">✅ (home): Add login test case</span><br><span class="line">🎨 (home, component): Improve login modal</span><br><span class="line">📦️ (npm): Add react-table</span><br><span class="line">🔨 Update script start-server.js</span><br></pre></td></tr></table></figure>
+
+<p>比较专业的 github repo 都会使用 gitmoji 进行管理 commit：执行 <code>git commit</code> 时使用 emoji 为本次提交打上一个 “标签”， 使得此次 commit 的主要工作得到凸现，提高阅读体验，同时也能够当作标签功能使得其在整个提交历史中易于区分与查找。</p>
+<table>
+<thead>
+<tr>
+<th align="left">emoji</th>
+<th align="left">emoji 代码</th>
+<th align="left">commit 说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">🔖</td>
+<td align="left"><code>:bookmark:</code></td>
+<td align="left"><strong>Release / Version tags.</strong></td>
+</tr>
+<tr>
+<td align="left">📝</td>
+<td align="left"><code>:memo:</code></td>
+<td align="left"><strong>Add or update documentation.</strong></td>
+</tr>
+<tr>
+<td align="left">✏️</td>
+<td align="left"><code>:pencil2:</code></td>
+<td align="left">Fix typos.</td>
+</tr>
+<tr>
+<td align="left">📄</td>
+<td align="left"><code>:page_facing_up:</code></td>
+<td align="left">Add or update license</td>
+</tr>
+<tr>
+<td align="left">✨</td>
+<td align="left"><code>:sparkles:</code></td>
+<td align="left">Introduce new features.</td>
+</tr>
+<tr>
+<td align="left">🎉</td>
+<td align="left"><code>:tada:</code></td>
+<td align="left">Begin a project.</td>
+</tr>
+<tr>
+<td align="left">💥</td>
+<td align="left"><code>:boom:</code></td>
+<td align="left">Introduce breaking changes.</td>
+</tr>
+<tr>
+<td align="left">🎨</td>
+<td align="left"><code>:art:</code></td>
+<td align="left"><strong>Improve structure / format of the code.</strong></td>
+</tr>
+<tr>
+<td align="left">⚡️</td>
+<td align="left"><code>:zap:</code></td>
+<td align="left">Improve performance.</td>
+</tr>
+<tr>
+<td align="left">🐛</td>
+<td align="left"><code>:bug:</code></td>
+<td align="left"><strong>Fix a bug.</strong></td>
+</tr>
+<tr>
+<td align="left">🚑</td>
+<td align="left"><code>:ambulance:</code></td>
+<td align="left">Critical hotfix.</td>
+</tr>
+<tr>
+<td align="left">💡</td>
+<td align="left"><code>:bulb:</code></td>
+<td align="left">Add or update comments in source code</td>
+</tr>
+<tr>
+<td align="left">🔥</td>
+<td align="left"><code>:fire:</code></td>
+<td align="left"><strong>Remove code or files.</strong></td>
+</tr>
+<tr>
+<td align="left">🗑️</td>
+<td align="left"><code>:wastebasket:</code></td>
+<td align="left">Deprecate code that needs to be cleaned up.。</td>
+</tr>
+<tr>
+<td align="left">🚚</td>
+<td align="left"><code>:truck:</code></td>
+<td align="left">Move or rename resources (e.g.: files, paths, routes).</td>
+</tr>
+<tr>
+<td align="left">💩</td>
+<td align="left"><code>:poop:</code></td>
+<td align="left">Write bad code that needs to be improved.</td>
+</tr>
+<tr>
+<td align="left">⚰️</td>
+<td align="left"><code>:coffin:</code><br /></td>
+<td align="left">Remove dead code.</td>
+</tr>
+<tr>
+<td align="left">📸</td>
+<td align="left"><code>:camera_flash:</code><br /></td>
+<td align="left">Add or update snapshots.</td>
+</tr>
+<tr>
+<td align="left">💄</td>
+<td align="left"><code>:lipstick:</code></td>
+<td align="left">Add or update the UI and style files.</td>
+</tr>
+<tr>
+<td align="left">💫</td>
+<td align="left"><code>:dizzy:</code></td>
+<td align="left">Add or update animations and transitions.</td>
+</tr>
+<tr>
+<td align="left">🍱</td>
+<td align="left"><code>:bento:</code></td>
+<td align="left">Add or update assets.</td>
+</tr>
+<tr>
+<td align="left">🙈</td>
+<td align="left"><code>:see_no_evil:</code></td>
+<td align="left">Add or update a .gitignore file.</td>
+</tr>
+<tr>
+<td align="left">⏪️</td>
+<td align="left"><code>:rewind:</code></td>
+<td align="left">Revert changes</td>
+</tr>
+<tr>
+<td align="left">🔀</td>
+<td align="left"><code>:twisted_rightwards_arrows:</code></td>
+<td align="left">Merge branches.</td>
+</tr>
+<tr>
+<td align="left">🔧</td>
+<td align="left"><code>:wrench:</code></td>
+<td align="left"><strong>Add or update configuration files.</strong></td>
+</tr>
+<tr>
+<td align="left">🚀</td>
+<td align="left"><code>:rocket:</code></td>
+<td align="left">Deploy stuff.</td>
+</tr>
+<tr>
+<td align="left">🚨</td>
+<td align="left"><code>:rotating_light:</code></td>
+<td align="left">Fix compiler / linter warnings.</td>
+</tr>
+<tr>
+<td align="left">🚧</td>
+<td align="left"><code>:construction:</code></td>
+<td align="left">Work in progress.</td>
+</tr>
+<tr>
+<td align="left">✅</td>
+<td align="left"><code>:white_check_mark:</code></td>
+<td align="left">Add, update, or pass tests.</td>
+</tr>
+<tr>
+<td align="left">💬</td>
+<td align="left"><code>:speech_balloon:</code></td>
+<td align="left">Add or update text and literals.</td>
+</tr>
+<tr>
+<td align="left">🍻</td>
+<td align="left"><code>:beers:</code></td>
+<td align="left">Write code drunkenly.</td>
+</tr>
+<tr>
+<td align="left">👽️</td>
+<td align="left"><code>:alien:</code></td>
+<td align="left">Update code due to external API changes.</td>
+</tr>
+<tr>
+<td align="left">🔨</td>
+<td align="left"><code>:hammer:</code></td>
+<td align="left">Add or update development scripts.</td>
+</tr>
+<tr>
+<td align="left">🔒</td>
+<td align="left"><code>:lock:</code></td>
+<td align="left">Fix security issues.</td>
+</tr>
+<tr>
+<td align="left">🏁</td>
+<td align="left"><code>:checked_flag:</code></td>
+<td align="left">修复 Windows 下的问题</td>
+</tr>
+<tr>
+<td align="left">🍎</td>
+<td align="left"><code>:apple:</code></td>
+<td align="left">修复 macOS 下的问题</td>
+</tr>
+<tr>
+<td align="left">🐧</td>
+<td align="left"><code>:penguin:</code></td>
+<td align="left">修复 Linux 下的问题</td>
+</tr>
+<tr>
+<td align="left">🐳</td>
+<td align="left"><code>:whale:</code></td>
+<td align="left">Docker 相关工作</td>
+</tr>
+<tr>
+<td align="left">♻️</td>
+<td align="left"><code>:recycle:</code></td>
+<td align="left">Refactor code</td>
+</tr>
+<tr>
+<td align="left">👷</td>
+<td align="left"><code>:construction_worker:</code></td>
+<td align="left">Add or update CI build system.</td>
+</tr>
+<tr>
+<td align="left">💚</td>
+<td align="left"><code>:green_heart:</code></td>
+<td align="left">fix CI Build.</td>
+</tr>
+<tr>
+<td align="left">📈</td>
+<td align="left"><code>:chart_with_upwards_trend:</code></td>
+<td align="left">Add or update analytics or track code</td>
+</tr>
+<tr>
+<td align="left">⬆️</td>
+<td align="left"><code>:arrow_up:</code></td>
+<td align="left">升级依赖</td>
+</tr>
+<tr>
+<td align="left">⬇️</td>
+<td align="left"><code>:arrow_down:</code></td>
+<td align="left">降级依赖</td>
+</tr>
+<tr>
+<td align="left">➕</td>
+<td align="left"><code>:heavy_plug_sign:</code></td>
+<td align="left">Add a dependency.</td>
+</tr>
+<tr>
+<td align="left">➖</td>
+<td align="left"><code>:heavy_minus_sign:</code></td>
+<td align="left">Remove a dependency.</td>
+</tr>
+<tr>
+<td align="left">📌</td>
+<td align="left"><code>:pushpin:</code></td>
+<td align="left">Pin dependencies to specific versions</td>
+</tr>
+<tr>
+<td align="left">🌐</td>
+<td align="left"><code>:globe_with_meridians:</code></td>
+<td align="left">Internationalization and localization.</td>
+</tr>
+<tr>
+<td align="left">🧪</td>
+<td align="left"><code>:test_tube:</code></td>
+<td align="left">Add a failing test.</td>
+</tr>
+<tr>
+<td align="left">👔</td>
+<td align="left"><code>:necktie:</code><br /></td>
+<td align="left">Add or update business logic</td>
+</tr>
+<tr>
+<td align="left">🧐</td>
+<td align="left"><code>:monocle_face:</code><br /></td>
+<td align="left">Data exploration/inspection.</td>
+</tr>
+<tr>
+<td align="left">🩹</td>
+<td align="left"><code>:adhesive_bandage:</code></td>
+<td align="left">Simple fix for a non-critical issue.</td>
+</tr>
+<tr>
+<td align="left">🛂</td>
+<td align="left"><code>:passport_control:</code></td>
+<td align="left">Work on code related to authorization, roles and permissions.</td>
+</tr>
+<tr>
+<td align="left">🥅</td>
+<td align="left"><code>:goal_net:</code></td>
+<td align="left">Catch errors.</td>
+</tr>
+<tr>
+<td align="left">🚩</td>
+<td align="left"><code>:triangular_flag_on_post:</code></td>
+<td align="left">Add, update, or remove feature flags.</td>
+</tr>
+<tr>
+<td align="left">🌱</td>
+<td align="left"><code>:seedling:</code></td>
+<td align="left">Add or update seed files.</td>
+</tr>
+<tr>
+<td align="left">🏷️</td>
+<td align="left"><code>:label:</code></td>
+<td align="left">Add or update types.</td>
+</tr>
+<tr>
+<td align="left">🔍️</td>
+<td align="left"><code>:mag:</code></td>
+<td align="left">Improve SEO.</td>
+</tr>
+<tr>
+<td align="left">⚗️</td>
+<td align="left"><code>:alembic:</code></td>
+<td align="left">Perform experiments.</td>
+</tr>
+<tr>
+<td align="left">🥚</td>
+<td align="left"><code>:egg:</code></td>
+<td align="left">Add or update an easter egg.</td>
+</tr>
+<tr>
+<td align="left">🤡</td>
+<td align="left"><code>:clown_face:</code></td>
+<td align="left">Mock things.</td>
+</tr>
+<tr>
+<td align="left">📱</td>
+<td align="left"><code>:iphone:</code></td>
+<td align="left">Work on responsive design</td>
+</tr>
+<tr>
+<td align="left">🏗️</td>
+<td align="left"><code>:building_construction:</code></td>
+<td align="left">Make architectural changes.</td>
+</tr>
+<tr>
+<td align="left">🚸</td>
+<td align="left"><code>:children_crossing:</code></td>
+<td align="left">Improve user experience / usability.</td>
+</tr>
+<tr>
+<td align="left">👥</td>
+<td align="left"><code>:busts_in_silhouette:</code></td>
+<td align="left">Add or update contributor(s).</td>
+</tr>
+<tr>
+<td align="left">🔇</td>
+<td align="left"><code>:mute:</code></td>
+<td align="left">Remove logs.</td>
+</tr>
+<tr>
+<td align="left">🔊</td>
+<td align="left"><code>:loud_sound:</code></td>
+<td align="left">Add or update logs.</td>
+</tr>
+<tr>
+<td align="left">🗃️</td>
+<td align="left"><code>:card_file_box:</code></td>
+<td align="left">Perform database related changes.</td>
+</tr>
+<tr>
+<td align="left">♿️</td>
+<td align="left"><code>:wheelchair:</code></td>
+<td align="left">Improve accessibility.</td>
+</tr>
+<tr>
+<td align="left">📦️</td>
+<td align="left"><code>:package:</code></td>
+<td align="left">Add or update compiled files or packages.</td>
+</tr>
+</tbody></table>
+<p>一些工具</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">前行者</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://54creator.cn/2021/08/11/yuque/%E7%BC%93%E5%AD%98%E7%9A%84%E6%96%B9%E6%A1%88/">http://54creator.cn/2021/08/11/yuque/%E7%BC%93%E5%AD%98%E7%9A%84%E6%96%B9%E6%A1%88/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://54creator.cn" target="_blank">前行者的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Github/">Github</a></div><div class="post_share"><div class="social-share" data-image="https://b3logfile.com/siyuan/1610205759005/assets/image-20211004232022-yqx105q.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2021/09/12/yuque/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">微服务</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">前行者</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zhangxuewen" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.yuque.com/54iter/blog" target="_blank" title="Yuque"><i class="fas fa-crow"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/11/18/yuque/java%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA/" title="java的虚拟机"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java的虚拟机"/></a><div class="content"><a class="title" href="/2021/11/18/yuque/java%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA/" title="java的虚拟机">java的虚拟机</a><time datetime="2021-11-18T05:25:59.000Z" title="发表于 2021-11-18 13:25:59">2021-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/12/yuque/%E6%8A%80%E6%9C%AF/" title="技术"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="技术"/></a><div class="content"><a class="title" href="/2021/11/12/yuque/%E6%8A%80%E6%9C%AF/" title="技术">技术</a><time datetime="2021-11-12T11:38:39.000Z" title="发表于 2021-11-12 19:38:39">2021-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/08/yuque/%E4%B8%89%E5%A4%A7%E9%9A%BE/" title="三大难"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="三大难"/></a><div class="content"><a class="title" href="/2021/11/08/yuque/%E4%B8%89%E5%A4%A7%E9%9A%BE/" title="三大难">三大难</a><time datetime="2021-11-08T08:45:12.000Z" title="发表于 2021-11-08 16:45:12">2021-11-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/08/yuque/%E5%89%8D%E7%AB%AF/" title="前端"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端"/></a><div class="content"><a class="title" href="/2021/11/08/yuque/%E5%89%8D%E7%AB%AF/" title="前端">前端</a><time datetime="2021-11-08T08:44:52.000Z" title="发表于 2021-11-08 16:44:52">2021-11-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/26/yuque/Java%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%AE%9E%E8%B7%B5/" title="Java即时编译器原理解析及实践"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java即时编译器原理解析及实践"/></a><div class="content"><a class="title" href="/2021/09/26/yuque/Java%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%AE%9E%E8%B7%B5/" title="Java即时编译器原理解析及实践">Java即时编译器原理解析及实践</a><time datetime="2021-09-26T03:40:38.000Z" title="发表于 2021-09-26 11:40:38">2021-09-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 前行者</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
