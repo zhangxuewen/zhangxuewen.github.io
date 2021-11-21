@@ -1,0 +1,249 @@
+@font-face {
+  font-family: 'alibaba-puhuiti';
+  font-display: swap;
+  src: url('/src/fonts/alibaba-puhuiti-regular.ttf') format("truetype");
+}
+/* 日间模式页面调整 */
+[data-theme=light] {
+    --card-bg: rgba(255,255,255,.9) !important; /* 全局背景调整 */
+    --h1-color: #04393f;
+    --h2-color: #34495e;
+    --h3-color: #34b3c6;
+    --h4-color: #03a1b9cc;
+    --h5-color: #58c6d6;
+    --blockquote-border-color: #9fc0d6;
+    --blockquote-background-color: #e6eeee5c;
+    --inline-code-background: #e7ecef;
+}
+
+/* 夜间模式页面调整 */
+[data-theme=dark] {
+    --card-bg: rgba(26, 27, 29, .9) !important; /* 全局背景调整 */
+    --btn-bg: #012c48 !important; /* 页面所有按钮夜间背景色 */
+    --h1-color: #4ef7e0;
+    --h2-color: #60e4f7;
+    --h3-color: #43b8ca;
+    --h4-color: #06a0b7;
+    --h5-color: #03889c;
+    --blockquote-border-color: #699495;
+    --blockquote-background-color: #26333ea6;
+    --inline-code-background: #225764;
+}
+
+/*哔哩哔哩视频适配*/
+.aspect-ratio {position: relative;width: 100%;height: 0;padding-bottom: 75%;margin: 3% auto;text-align: center;}      
+.aspect-ratio iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+
+
+/* 滚动条 */
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #71ca80;
+    background-image: -webkit-linear-gradient( 45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: #71ca80;
+}
+
+
+/* 去除时钟背景 */
+.card-widget.card-clock  .card-glass .card-background {
+    background-color: unset !important;
+    box-shadow: unset !important;
+}
+
+h1{
+    text-align: center;
+    font-size: 1.75em !important;
+    color: var(--h1-color);
+}
+h2 {
+    color:var(--h2-color);
+    font-size: 1.55em !important;
+}
+h3 {
+    color:var(--h3-color);
+
+    font-size: 1.35em !important;
+
+}
+h3:before {
+    content: "| ";
+
+
+}
+h4 {
+    font-size: 1.2em !important;
+    color: var(--h4-color);
+}
+h5 {
+    font-size: 1.1em!important;
+    color: var(--h5-color);
+}
+
+blockquote {
+    margin: 0 0 1rem;
+    padding: .1rem .8rem;
+    border-left: 4px solid var(--blockquote-border-color);
+    background-color: var(--blockquote-background-color);
+    border-radius: .31em;
+    color: inherit;
+    opacity: 0.85;
+}
+#article-container a {
+    color: #49b1b2;
+}
+#article-container code {
+    padding: 0.1rem 0.2rem;
+    background: var(--inline-code-background);
+    color: inherit;
+    border: 1px solid #c6c6c73f;
+    border-radius: 3px;
+}
+
+#he-plugin-simple {
+    top: 1rem !important;
+    left: 8rem !important;
+}
+
+/* 鼠标 */
+body {
+    cursor: url(/src/cursors/default.cur),
+        default;
+}
+a,
+img {
+    cursor: url(/src/cursors/pointer.cur),
+        default;
+}
+
+
+#live2d-widget.live2d-widget-container {
+    z-index: 1 !important;
+}
+
+#rightside_config {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+
+.card-clock-weather,
+.card-clock-location,
+.card-clock-humidity,
+.card-clock-dackorlight,
+.card-clock-ip {
+    display: none !important;
+}
+
+.card-widget.card-clock {
+    height: 100px;
+}
+.card-clock-clockdate, .card-clock-ip {
+    top: -18px;
+    display: block;
+    position: relative;
+}
+.card-clock-time {
+    flex: 1;
+    font-family: UnidreamLED;
+    font-size: 38px;
+    text-align: center;
+    line-height: 1.5;
+    position: relative;
+    top: -23px;
+}
+
+
+.avatar-img img:hover {
+        -webkit-transform: rotate(
+    0deg
+    );
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.avatar-img:hover {
+        transform: scale(1.2);
+        transition: all 0.2s ease;
+}
+#waifu {
+    /* cursor: grab;
+    height: 250px;
+	width: 250px; */
+    transform: scale(0.9) !important;
+    bottom: -17px !important;
+    left: -30px !important;
+    /* top: -180px !important;
+    left: -74px !important; */
+}
+#waifu-tips{
+    /* top: -154px !important; */
+    width: 158px !important;
+    left: 14px !important;
+    font-size: 17px !important;
+}
+
+/* #waifu-tool .fa-comment, */
+/* #waifu-tool .fa-user-circle, */
+#waifu-tool .fa-camera-retro,
+#waifu-tool .fa-info-circle,
+#waifu-tool .fa-paper-plane{
+    display: none !important;
+} 
+.aplayer-narrow .aplayer-body {
+    bottom: 400px !important;
+    left: -68px !important;
+}
+.aplayer-body {
+    bottom: 400px !important;
+}
+.aplayer .aplayer-pic .aplayer-pause {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    bottom: 24px !important;
+    right: 24px !important; 
+}
+.aplayer-withlist[data-type="playlist"] {
+    bottom: 140px !important;
+}
+.aplayer.aplayer-fixed .aplayer-list {
+    margin-bottom: 0px !important;
+}
+
+/* #rightside {
+    right: 6px !important;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 1023px) {
+    #live2d-widget {
+        display: none;
+    }
+    #rightside {
+    right: 0px !important;
+}
+
+} */
