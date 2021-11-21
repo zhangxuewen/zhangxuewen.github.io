@@ -112,6 +112,11 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/zhangxuewen/zhangxuewen.github.io
-  branch: public
+  repo:
+    # Either syntax is supported
+    github: https://github.com/zhangxuewen/zhangxuewen.github.io.git,public
+    gitee:
+      url: https://e.coding.net/zhangxuewen-01/blog/blog-web.git
+      branch: master
   message: deploy
+ 
