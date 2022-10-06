@@ -1,0 +1,32 @@
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+    background-color: var(--ifm-color-area);
+  }
+  
+  .featureSvg {
+    max-width: 100px;
+    max-height: 80px;
+  }
+  .features h2 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 31;
+    color: var(--ifm-color-title);
+  }
+  
+  .features p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 34px;
+    color: #878787;
+    text-align: center;
+  }
+
+  .features a {
+    text-decoration: none;
+  }
