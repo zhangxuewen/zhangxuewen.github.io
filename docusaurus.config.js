@@ -11,7 +11,8 @@ const config = {
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'zhangxuewen',
-  projectName: 'zhangxuewen',
+  projectName: 'zhangxuewen.github.io',
+  deploymentBranch:'public',
   themeConfig: {
     announcementBar: {
       id: 'announcementBar',
@@ -23,6 +24,7 @@ const config = {
     algolia: {
       apiKey: 'e019b7d51c61cf4ecd39398f71093afc',
       indexName: '51hpz',
+      appId:'NIWOCWU1XK'
     }
     
   },
