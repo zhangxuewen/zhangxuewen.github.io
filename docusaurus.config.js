@@ -5,13 +5,13 @@ const footer = require('./config/footer');
 const config = {
   title: '打卡机',
   tagline: '打卡构建自己的知识体系',
-  url: 'https://blog.54creator.cn',
+  url: 'https://51hpz.cn',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'blog',
-  projectName: 'blog',
+  organizationName: 'zhangxuewen',
+  projectName: 'zhangxuewen',
   themeConfig: {
     announcementBar: {
       id: 'announcementBar',
