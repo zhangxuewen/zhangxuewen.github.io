@@ -1,0 +1,24 @@
+{
+  "unversionedId": "opensource/springboot/about",
+  "id": "opensource/springboot/about",
+  "title": "about",
+  "description": "data",
+  "source": "@site/docs/opensource/springboot/about.md",
+  "sourceDirName": "opensource/springboot",
+  "slug": "/opensource/springboot/about",
+  "permalink": "/docs/opensource/springboot/about",
+  "draft": false,
+  "editUrl": "https://github.com/ice-lab/site/edit/master/docs/opensource/springboot/about.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "opensource",
+  "previous": {
+    "title": "产品思维",
+    "permalink": "/docs/opensource/about"
+  },
+  "next": {
+    "title": "about",
+    "permalink": "/docs/opensource/sofastack/about"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "blogPosts": [
+    {
+      "id": "welcome",
+      "metadata": {
+        "permalink": "/contentweekly/welcome",
+        "source": "@site/contentweekly/2020-05-20-test.md",
+        "title": "Welcome1",
+        "description": "思考与学习",
+        "date": "2020-05-20T00:00:00.000Z",
+        "formattedDate": "May 20, 2020",
+        "tags": [
+          {
+            "label": "hello1",
+            "permalink": "/contentweekly/tags/hello-1"
+          },
+          {
+            "label": "agile1",
+            "permalink": "/contentweekly/tags/agile-1"
+          }
+        ],
+        "readingTime": 0.025,
+        "hasTruncateMarker": false,
+        "authors": [
+          {
+            "name": "Benno Dev",
+            "title": "Full Steck Developer",
+            "url": "https://github.com/bennodev19",
+            "imageURL": "https://avatars3.githubusercontent.com/u/57860196?s=460&u=0648b65f7520a2bbc5a3052c06a37de046793af8&v=4"
+          }
+        ],
+        "frontMatter": {
+          "slug": "welcome",
+          "title": "Welcome1",
+          "author": "Benno Dev",
+          "author_title": "Full Steck Developer",
+          "author_url": "https://github.com/bennodev19",
+          "author_image_url": "https://avatars3.githubusercontent.com/u/57860196?s=460&u=0648b65f7520a2bbc5a3052c06a37de046793af8&v=4",
+          "tags": [
+            "hello1",
+            "agile1"
+          ]
+        }
+      },
+      "content": "思考与学习"
+    }
+  ]
+}

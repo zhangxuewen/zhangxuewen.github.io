@@ -1,0 +1,161 @@
+{
+  "docusaurus-plugin-google-gtag": {
+    "default": {
+      "trackingID": "G-QZ0FEKY38G",
+      "anonymizeIP": false,
+      "id": "default"
+    }
+  },
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "knowledge/about",
+          "docs": [
+            {
+              "id": "knowledge/about",
+              "path": "/docs/knowledge/about",
+              "sidebar": "knowledge"
+            },
+            {
+              "id": "knowledge/architecture/about",
+              "path": "/docs/knowledge/architecture/about",
+              "sidebar": "knowledge"
+            },
+            {
+              "id": "knowledge/bigdata/about",
+              "path": "/docs/knowledge/bigdata/about",
+              "sidebar": "knowledge"
+            },
+            {
+              "id": "knowledge/middleware/about",
+              "path": "/docs/knowledge/middleware/about",
+              "sidebar": "knowledge"
+            },
+            {
+              "id": "knowledge/stability/about",
+              "path": "/docs/knowledge/stability/about",
+              "sidebar": "knowledge"
+            },
+            {
+              "id": "manage/about",
+              "path": "/docs/manage/about",
+              "sidebar": "manage"
+            },
+            {
+              "id": "manage/communicate/about",
+              "path": "/docs/manage/communicate/about"
+            },
+            {
+              "id": "manage/thinking/about",
+              "path": "/docs/manage/thinking/about"
+            },
+            {
+              "id": "opensource/about",
+              "path": "/docs/opensource/about",
+              "sidebar": "opensource"
+            },
+            {
+              "id": "opensource/doris/about",
+              "path": "/docs/opensource/doris/about",
+              "sidebar": "opensource"
+            },
+            {
+              "id": "opensource/flink/about",
+              "path": "/docs/opensource/flink/about",
+              "sidebar": "opensource"
+            },
+            {
+              "id": "opensource/polaris/about",
+              "path": "/docs/opensource/polaris/about",
+              "sidebar": "opensource"
+            },
+            {
+              "id": "opensource/pulsar/about",
+              "path": "/docs/opensource/pulsar/about",
+              "sidebar": "opensource"
+            },
+            {
+              "id": "opensource/sofastack/about",
+              "path": "/docs/opensource/sofastack/about",
+              "sidebar": "opensource"
+            },
+            {
+              "id": "opensource/springboot/about",
+              "path": "/docs/opensource/springboot/about",
+              "sidebar": "opensource"
+            },
+            {
+              "id": "technotes/about",
+              "path": "/docs/technotes/about",
+              "sidebar": "technotes"
+            },
+            {
+              "id": "technotes/algorithms/about",
+              "path": "/docs/technotes/algorithms/about",
+              "sidebar": "technotes"
+            },
+            {
+              "id": "technotes/concurrency/about",
+              "path": "/docs/technotes/concurrency/about",
+              "sidebar": "technotes"
+            },
+            {
+              "id": "technotes/database/about",
+              "path": "/docs/technotes/database/about",
+              "sidebar": "technotes"
+            },
+            {
+              "id": "technotes/distributed/about",
+              "path": "/docs/technotes/distributed/about",
+              "sidebar": "technotes"
+            },
+            {
+              "id": "technotes/frontend/about",
+              "path": "/docs/technotes/frontend/about",
+              "sidebar": "technotes"
+            },
+            {
+              "id": "technotes/microservice/about",
+              "path": "/docs/technotes/microservice/about",
+              "sidebar": "technotes"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "knowledge": {
+              "link": {
+                "path": "/docs/knowledge/about",
+                "label": "knowledge/about"
+              }
+            },
+            "manage": {
+              "link": {
+                "path": "/docs/manage/about",
+                "label": "manage/about"
+              }
+            },
+            "opensource": {
+              "link": {
+                "path": "/docs/opensource/about",
+                "label": "opensource/about"
+              }
+            },
+            "technotes": {
+              "link": {
+                "path": "/docs/technotes/about",
+                "label": "technotes/about"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

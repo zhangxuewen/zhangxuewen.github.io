@@ -1,0 +1,13 @@
+{
+  "title": "Recent posts",
+  "items": [
+    {
+      "title": "Welcome",
+      "permalink": "/blog/welcome"
+    },
+    {
+      "title": "world",
+      "permalink": "/blog/world"
+    }
+  ]
+}

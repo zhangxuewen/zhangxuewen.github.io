@@ -1,0 +1,24 @@
+{
+  "unversionedId": "opensource/pulsar/about",
+  "id": "opensource/pulsar/about",
+  "title": "about",
+  "description": "data",
+  "source": "@site/docs/opensource/pulsar/about.md",
+  "sourceDirName": "opensource/pulsar",
+  "slug": "/opensource/pulsar/about",
+  "permalink": "/docs/opensource/pulsar/about",
+  "draft": false,
+  "editUrl": "https://github.com/ice-lab/site/edit/master/docs/opensource/pulsar/about.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "opensource",
+  "previous": {
+    "title": "about",
+    "permalink": "/docs/opensource/sofastack/about"
+  },
+  "next": {
+    "title": "about",
+    "permalink": "/docs/opensource/doris/about"
+  }
+}

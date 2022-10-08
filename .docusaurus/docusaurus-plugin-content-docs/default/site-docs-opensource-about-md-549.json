@@ -1,0 +1,23 @@
+{
+  "unversionedId": "opensource/about",
+  "id": "opensource/about",
+  "title": "产品思维",
+  "description": "icejs 支持的工程配置项列表，所有配置项都在 [build.json 文件] 中编写。",
+  "source": "@site/docs/opensource/about.md",
+  "sourceDirName": "opensource",
+  "slug": "/opensource/about",
+  "permalink": "/docs/opensource/about",
+  "draft": false,
+  "editUrl": "https://github.com/ice-lab/site/edit/master/docs/opensource/about.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "产品思维",
+    "order": 7
+  },
+  "sidebar": "opensource",
+  "next": {
+    "title": "about",
+    "permalink": "/docs/opensource/springboot/about"
+  }
+}

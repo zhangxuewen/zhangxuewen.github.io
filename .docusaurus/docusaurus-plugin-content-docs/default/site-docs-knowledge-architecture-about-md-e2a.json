@@ -1,0 +1,24 @@
+{
+  "unversionedId": "knowledge/architecture/about",
+  "id": "knowledge/architecture/about",
+  "title": "about",
+  "description": "",
+  "source": "@site/docs/knowledge/architecture/about.md",
+  "sourceDirName": "knowledge/architecture",
+  "slug": "/knowledge/architecture/about",
+  "permalink": "/docs/knowledge/architecture/about",
+  "draft": false,
+  "editUrl": "https://github.com/ice-lab/site/edit/master/docs/knowledge/architecture/about.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "knowledge",
+  "previous": {
+    "title": "about",
+    "permalink": "/docs/knowledge/stability/about"
+  },
+  "next": {
+    "title": "about",
+    "permalink": "/docs/knowledge/middleware/about"
+  }
+}

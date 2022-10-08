@@ -1,0 +1,24 @@
+{
+  "unversionedId": "knowledge/middleware/about",
+  "id": "knowledge/middleware/about",
+  "title": "about",
+  "description": "",
+  "source": "@site/docs/knowledge/middleware/about.md",
+  "sourceDirName": "knowledge/middleware",
+  "slug": "/knowledge/middleware/about",
+  "permalink": "/docs/knowledge/middleware/about",
+  "draft": false,
+  "editUrl": "https://github.com/ice-lab/site/edit/master/docs/knowledge/middleware/about.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "knowledge",
+  "previous": {
+    "title": "about",
+    "permalink": "/docs/knowledge/architecture/about"
+  },
+  "next": {
+    "title": "about",
+    "permalink": "/docs/knowledge/bigdata/about"
+  }
+}

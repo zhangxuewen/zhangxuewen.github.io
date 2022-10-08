@@ -1,0 +1,15 @@
+{
+  "unversionedId": "manage/communicate/about",
+  "id": "manage/communicate/about",
+  "title": "about",
+  "description": "",
+  "source": "@site/docs/manage/communicate/about.md",
+  "sourceDirName": "manage/communicate",
+  "slug": "/manage/communicate/about",
+  "permalink": "/docs/manage/communicate/about",
+  "draft": false,
+  "editUrl": "https://github.com/ice-lab/site/edit/master/docs/manage/communicate/about.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

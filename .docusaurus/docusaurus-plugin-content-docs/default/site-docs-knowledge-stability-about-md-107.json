@@ -1,0 +1,24 @@
+{
+  "unversionedId": "knowledge/stability/about",
+  "id": "knowledge/stability/about",
+  "title": "about",
+  "description": "",
+  "source": "@site/docs/knowledge/stability/about.md",
+  "sourceDirName": "knowledge/stability",
+  "slug": "/knowledge/stability/about",
+  "permalink": "/docs/knowledge/stability/about",
+  "draft": false,
+  "editUrl": "https://github.com/ice-lab/site/edit/master/docs/knowledge/stability/about.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "knowledge",
+  "previous": {
+    "title": "数据思维",
+    "permalink": "/docs/knowledge/about"
+  },
+  "next": {
+    "title": "about",
+    "permalink": "/docs/knowledge/architecture/about"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "unversionedId": "manage/about",
+  "id": "manage/about",
+  "title": "技术管理的思考",
+  "description": "<img style={{",
+  "source": "@site/docs/manage/about.md",
+  "sourceDirName": "manage",
+  "slug": "/manage/about",
+  "permalink": "/docs/manage/about",
+  "draft": false,
+  "editUrl": "https://github.com/ice-lab/site/edit/master/docs/manage/about.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "技术管理的思考",
+    "order": 1
+  },
+  "sidebar": "manage"
+}

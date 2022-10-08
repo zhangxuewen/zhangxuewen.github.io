@@ -1,0 +1,24 @@
+{
+  "unversionedId": "technotes/concurrency/about",
+  "id": "technotes/concurrency/about",
+  "title": "about",
+  "description": "data",
+  "source": "@site/docs/technotes/concurrency/about.md",
+  "sourceDirName": "technotes/concurrency",
+  "slug": "/technotes/concurrency/about",
+  "permalink": "/docs/technotes/concurrency/about",
+  "draft": false,
+  "editUrl": "https://github.com/ice-lab/site/edit/master/docs/technotes/concurrency/about.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "technotes",
+  "previous": {
+    "title": "技术",
+    "permalink": "/docs/technotes/about"
+  },
+  "next": {
+    "title": "about",
+    "permalink": "/docs/technotes/distributed/about"
+  }
+}

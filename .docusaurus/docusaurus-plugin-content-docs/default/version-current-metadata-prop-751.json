@@ -1,0 +1,400 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "knowledge": [
+      {
+        "type": "link",
+        "label": "数据思维",
+        "href": "/docs/knowledge/about",
+        "docId": "knowledge/about"
+      },
+      {
+        "type": "category",
+        "label": "稳定性",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/knowledge/stability/about",
+            "docId": "knowledge/stability/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "软件架构",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/knowledge/architecture/about",
+            "docId": "knowledge/architecture/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "中间件",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/knowledge/middleware/about",
+            "docId": "knowledge/middleware/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "大数据",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/knowledge/bigdata/about",
+            "docId": "knowledge/bigdata/about"
+          }
+        ],
+        "collapsible": true
+      }
+    ],
+    "manage": [
+      {
+        "type": "link",
+        "label": "技术管理的思考",
+        "href": "/docs/manage/about",
+        "docId": "manage/about"
+      }
+    ],
+    "opensource": [
+      {
+        "type": "link",
+        "label": "产品思维",
+        "href": "/docs/opensource/about",
+        "docId": "opensource/about"
+      },
+      {
+        "type": "category",
+        "label": "springboot",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/opensource/springboot/about",
+            "docId": "opensource/springboot/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "sofastack",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/opensource/sofastack/about",
+            "docId": "opensource/sofastack/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "apache pulsar",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/opensource/pulsar/about",
+            "docId": "opensource/pulsar/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "apache doris",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/opensource/doris/about",
+            "docId": "opensource/doris/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "apache polaris",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/opensource/polaris/about",
+            "docId": "opensource/polaris/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "apache flink",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/opensource/flink/about",
+            "docId": "opensource/flink/about"
+          }
+        ],
+        "collapsible": true
+      }
+    ],
+    "technotes": [
+      {
+        "type": "link",
+        "label": "技术",
+        "href": "/docs/technotes/about",
+        "docId": "technotes/about"
+      },
+      {
+        "type": "category",
+        "label": "并发技术",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/technotes/concurrency/about",
+            "docId": "technotes/concurrency/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "分布式技术",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/technotes/distributed/about",
+            "docId": "technotes/distributed/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "数据库技术",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/technotes/database/about",
+            "docId": "technotes/database/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "前端技术",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/technotes/frontend/about",
+            "docId": "technotes/frontend/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "数据结构与算法",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/technotes/algorithms/about",
+            "docId": "technotes/algorithms/about"
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "微服务技术",
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "about",
+            "href": "/docs/technotes/microservice/about",
+            "docId": "technotes/microservice/about"
+          }
+        ],
+        "collapsible": true
+      }
+    ]
+  },
+  "docs": {
+    "knowledge/about": {
+      "id": "knowledge/about",
+      "title": "数据思维",
+      "description": "icejs 支持的工程配置项列表，所有配置项都在 [build.json 文件] 中编写。",
+      "sidebar": "knowledge"
+    },
+    "knowledge/architecture/about": {
+      "id": "knowledge/architecture/about",
+      "title": "about",
+      "description": "",
+      "sidebar": "knowledge"
+    },
+    "knowledge/bigdata/about": {
+      "id": "knowledge/bigdata/about",
+      "title": "about",
+      "description": "",
+      "sidebar": "knowledge"
+    },
+    "knowledge/middleware/about": {
+      "id": "knowledge/middleware/about",
+      "title": "about",
+      "description": "",
+      "sidebar": "knowledge"
+    },
+    "knowledge/stability/about": {
+      "id": "knowledge/stability/about",
+      "title": "about",
+      "description": "",
+      "sidebar": "knowledge"
+    },
+    "manage/about": {
+      "id": "manage/about",
+      "title": "技术管理的思考",
+      "description": "<img style={{",
+      "sidebar": "manage"
+    },
+    "manage/communicate/about": {
+      "id": "manage/communicate/about",
+      "title": "about",
+      "description": ""
+    },
+    "manage/thinking/about": {
+      "id": "manage/thinking/about",
+      "title": "思维框架",
+      "description": "飞冰框架跟具体的组件如 antd/fusion 没有耦合关系，你可以选择你想用的任何 React 组件体系。"
+    },
+    "opensource/about": {
+      "id": "opensource/about",
+      "title": "产品思维",
+      "description": "icejs 支持的工程配置项列表，所有配置项都在 [build.json 文件] 中编写。",
+      "sidebar": "opensource"
+    },
+    "opensource/doris/about": {
+      "id": "opensource/doris/about",
+      "title": "about",
+      "description": "data",
+      "sidebar": "opensource"
+    },
+    "opensource/flink/about": {
+      "id": "opensource/flink/about",
+      "title": "about",
+      "description": "data",
+      "sidebar": "opensource"
+    },
+    "opensource/polaris/about": {
+      "id": "opensource/polaris/about",
+      "title": "about",
+      "description": "data",
+      "sidebar": "opensource"
+    },
+    "opensource/pulsar/about": {
+      "id": "opensource/pulsar/about",
+      "title": "about",
+      "description": "data",
+      "sidebar": "opensource"
+    },
+    "opensource/sofastack/about": {
+      "id": "opensource/sofastack/about",
+      "title": "about",
+      "description": "data",
+      "sidebar": "opensource"
+    },
+    "opensource/springboot/about": {
+      "id": "opensource/springboot/about",
+      "title": "about",
+      "description": "data",
+      "sidebar": "opensource"
+    },
+    "technotes/about": {
+      "id": "technotes/about",
+      "title": "技术",
+      "description": "datata",
+      "sidebar": "technotes"
+    },
+    "technotes/algorithms/about": {
+      "id": "technotes/algorithms/about",
+      "title": "about",
+      "description": "",
+      "sidebar": "technotes"
+    },
+    "technotes/concurrency/about": {
+      "id": "technotes/concurrency/about",
+      "title": "about",
+      "description": "data",
+      "sidebar": "technotes"
+    },
+    "technotes/database/about": {
+      "id": "technotes/database/about",
+      "title": "about",
+      "description": "",
+      "sidebar": "technotes"
+    },
+    "technotes/distributed/about": {
+      "id": "technotes/distributed/about",
+      "title": "about",
+      "description": "dtat",
+      "sidebar": "technotes"
+    },
+    "technotes/frontend/about": {
+      "id": "technotes/frontend/about",
+      "title": "about",
+      "description": "",
+      "sidebar": "technotes"
+    },
+    "technotes/microservice/about": {
+      "id": "technotes/microservice/about",
+      "title": "about",
+      "description": "",
+      "sidebar": "technotes"
+    }
+  }
+}

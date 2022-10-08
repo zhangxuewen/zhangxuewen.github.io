@@ -1,0 +1,24 @@
+{
+  "unversionedId": "technotes/algorithms/about",
+  "id": "technotes/algorithms/about",
+  "title": "about",
+  "description": "",
+  "source": "@site/docs/technotes/algorithms/about.md",
+  "sourceDirName": "technotes/algorithms",
+  "slug": "/technotes/algorithms/about",
+  "permalink": "/docs/technotes/algorithms/about",
+  "draft": false,
+  "editUrl": "https://github.com/ice-lab/site/edit/master/docs/technotes/algorithms/about.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "technotes",
+  "previous": {
+    "title": "about",
+    "permalink": "/docs/technotes/frontend/about"
+  },
+  "next": {
+    "title": "about",
+    "permalink": "/docs/technotes/microservice/about"
+  }
+}

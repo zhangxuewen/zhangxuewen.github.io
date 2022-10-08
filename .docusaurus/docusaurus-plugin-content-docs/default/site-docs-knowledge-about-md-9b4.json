@@ -1,0 +1,23 @@
+{
+  "unversionedId": "knowledge/about",
+  "id": "knowledge/about",
+  "title": "数据思维",
+  "description": "icejs 支持的工程配置项列表，所有配置项都在 [build.json 文件] 中编写。",
+  "source": "@site/docs/knowledge/about.md",
+  "sourceDirName": "knowledge",
+  "slug": "/knowledge/about",
+  "permalink": "/docs/knowledge/about",
+  "draft": false,
+  "editUrl": "https://github.com/ice-lab/site/edit/master/docs/knowledge/about.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "数据思维",
+    "order": 7
+  },
+  "sidebar": "knowledge",
+  "next": {
+    "title": "about",
+    "permalink": "/docs/knowledge/stability/about"
+  }
+}
