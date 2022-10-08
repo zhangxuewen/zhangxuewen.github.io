@@ -12,7 +12,6 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'zhangxuewen',
   projectName: 'zhangxuewen.github.io',
-  deploymentBranch:'public',
   themeConfig: {
     announcementBar: {
       id: 'announcementBar',
