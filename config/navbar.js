@@ -1,7 +1,7 @@
 module.exports = {
-  title: '打卡机',
+  title: '打卡生活',
   logo: {
-    alt: '技术机',
+    alt: '技术生活',
     src: 'img/logo.png',
   },
   items: [
