@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmyblog=self.webpackChunkmyblog||[]).push([[1210],{3460:e=>{e.exports=JSON.parse('{"name":"docusaurus-redirect-plugin","id":"default"}')}}]);

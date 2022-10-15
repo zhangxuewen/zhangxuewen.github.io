@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://51hpz.cn/contentweekly</id>
+    <title>构建自己的人生体系 Blog</title>
+    <updated>2020-05-20T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://51hpz.cn/contentweekly"/>
+    <subtitle>构建自己的人生体系 Blog</subtitle>
+    <icon>https://51hpz.cn/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Welcome1]]></title>
+        <id>welcome</id>
+        <link href="https://51hpz.cn/contentweekly/welcome"/>
+        <updated>2020-05-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[思考与学习]]></summary>
+        <author>
+            <name>Benno Dev</name>
+            <uri>https://github.com/bennodev19</uri>
+        </author>
+    </entry>
+</feed>
