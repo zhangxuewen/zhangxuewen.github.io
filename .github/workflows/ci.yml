@@ -50,3 +50,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           publish_branch: public  # default: gh-pages
+          cname: 51hpz.cn
