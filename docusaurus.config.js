@@ -47,7 +47,7 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         gtag: {
-          trackingID: 'G-QZ0FEKY38G',
+          trackingID: 'G-ZZHPHMRETL',
         }
       },
     ],
