@@ -20,7 +20,7 @@ function Splash() {
         </div>
       </div>
       <div className={styles.con} >
-          <a href={useBaseUrl('/create/redis-stack4')} style={{textDecoration:'none'}}>
+          <a href='https://www.yuque.com/54iter/it' style={{textDecoration:'none'}}  target="_blank" >
             <div className={styles.condiv}>
                 <div className={styles.text}>
                   <h3 className={styles.boxtitle}>专注</h3>
@@ -30,7 +30,7 @@ function Splash() {
                 </div>  
             </div>
           </a>
-          <a href={useBaseUrl('/create/redis-stack3')} style={{textDecoration:'none'}}>
+          <a href='https://www.yuque.com/54iter/business' style={{textDecoration:'none'}}  target="_blank">
              <div className={styles.condiv}>
                 <div className={styles.text}>
                   <h3 className={styles.boxtitle}>专业</h3>
@@ -40,7 +40,7 @@ function Splash() {
                 </div>  
              </div> 
           </a>
-          <a href={useBaseUrl('/create/redis-stack2')} style={{textDecoration:'none'}}>     
+          <a href='https://www.yuque.com/54iter/product' style={{textDecoration:'none'}}  target="_blank">     
              <div className={styles.condiv}>              
                 <div className={styles.text}>
                   <h3 className={styles.boxtitle}>精益</h3>
@@ -50,7 +50,7 @@ function Splash() {
                 </div>
             </div>
           </a>
-          <a href={useBaseUrl('/create/redis-stack1')} style={{textDecoration:'none'}}>        
+          <a href='https://www.yuque.com/54iter/data' style={{textDecoration:'none'}}  target="_blank">        
              <div className={styles.condiv}>
                 <div className={styles.text}>
                   <h3 className={styles.boxtitle}>洞察</h3>
