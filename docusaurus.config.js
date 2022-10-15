@@ -3,8 +3,8 @@ const navbar = require('./config/navbar');
 const footer = require('./config/footer');
 
 const config = {
-  title: '打卡机',
-  tagline: '打卡构建自己的知识体系',
+  title: '构建自己的人生体系',
+  tagline: '打卡生活',
   url: 'https://51hpz.cn',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -23,7 +23,11 @@ const config = {
     algolia: {
       apiKey: 'e019b7d51c61cf4ecd39398f71093afc',
       indexName: '51hpz',
-      appId:'NIWOCWU1XK'
+      appId:'NIWOCWU1XK',
+      contextualSearch: true,
+      rateLimit: 8,
+      maxDepth: 10,
+
     }
     
   },
