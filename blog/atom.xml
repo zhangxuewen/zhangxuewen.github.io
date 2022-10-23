@@ -2,31 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://51hpz.cn/blog</id>
     <title>构建自己的人生体系 Blog</title>
-    <updated>2019-05-30T00:00:00.000Z</updated>
+    <updated>2019-05-31T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://51hpz.cn/blog"/>
     <subtitle>构建自己的人生体系 Blog</subtitle>
     <icon>https://51hpz.cn/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Welcome]]></title>
-        <id>welcome</id>
-        <link href="https://51hpz.cn/blog/welcome"/>
-        <updated>2019-05-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[互联网的最大难]]></summary>
+        <title type="html"><![CDATA[毕业赠言(转载)]]></title>
+        <id>quote</id>
+        <link href="https://51hpz.cn/blog/quote"/>
+        <updated>2019-05-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[在毕业生们迈出象牙塔之时，他们应该听从哪些人的建议？在走向独立和自主的伟大征程中，他们该吸取哪些教训？听一听各领域成功者们的建议或许不错，这些人 是富有远见的商业领导者，他们从无到有建立起自己的帝国，并都跻身世界最富有的人之列。以下是历年来多位IT领袖在毕业典礼上所做演讲的节选，我们从中提取出了可供应届毕业生采纳的建议：]]></summary>
         <author>
-            <name>Benno Dev</name>
-            <uri>https://github.com/bennodev19</uri>
+            <name>zhangxuewen</name>
+            <uri>https://github.com/zhangxuewen</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[world]]></title>
-        <id>world</id>
-        <link href="https://51hpz.cn/blog/world"/>
+        <title type="html"><![CDATA[开发的三大难]]></title>
+        <id>thirdhard</id>
+        <link href="https://51hpz.cn/blog/thirdhard"/>
         <updated>2019-05-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[react学习]]></summary>
+        <summary type="html"><![CDATA[程序员一般遇到这三种项目都会脑袋痛，改造，重构，迁移。因为它们都属于改动大，又很容易出问题的项目，但是对业务的价值又很阐述（主要是针对业务驱动型的公司，对于技术驱动型的公司比较好解释）。下面我结合一条小路详细给大家解释一下这三种技术难点]]></summary>
         <author>
-            <name>Benno Dev</name>
-            <uri>https://github.com/bennodev19</uri>
+            <name>zhangxuewen</name>
+            <uri>https://github.com/zhangxuewen</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新的起点，博客重开张]]></title>
+        <id>start</id>
+        <link href="https://51hpz.cn/blog/start"/>
+        <updated>2019-01-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[作为一个刚过35岁的程序员，回首过去，突然发现自己在互联网并没有留下什么，这并不是自己的初忠。总结过去就是自己的惰性太强了。其实在大学的时候自己就已经搭建了自己的独立技术博客，但是断断续续写写停停，博客技术用了很多WordPress，Jekyll、Hugo、Hexo，但是内容沉淀确很少。下一个十年已经开始，希望从现在开始，克服懒惰，持续的输入和输出，构建自己的未来的人生体系。]]></summary>
+        <author>
+            <name>zhangxuewen</name>
+            <uri>https://github.com/zhangxuewen</uri>
         </author>
     </entry>
 </feed>

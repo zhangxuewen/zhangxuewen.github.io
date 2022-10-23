@@ -4,22 +4,29 @@
         <title>构建自己的人生体系 Blog</title>
         <link>https://51hpz.cn/blog</link>
         <description>构建自己的人生体系 Blog</description>
-        <lastBuildDate>Thu, 30 May 2019 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 31 May 2019 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Welcome]]></title>
-            <link>https://51hpz.cn/blog/welcome</link>
-            <guid>welcome</guid>
-            <pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate>
-            <description><![CDATA[互联网的最大难]]></description>
+            <title><![CDATA[毕业赠言(转载)]]></title>
+            <link>https://51hpz.cn/blog/quote</link>
+            <guid>quote</guid>
+            <pubDate>Fri, 31 May 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[在毕业生们迈出象牙塔之时，他们应该听从哪些人的建议？在走向独立和自主的伟大征程中，他们该吸取哪些教训？听一听各领域成功者们的建议或许不错，这些人 是富有远见的商业领导者，他们从无到有建立起自己的帝国，并都跻身世界最富有的人之列。以下是历年来多位IT领袖在毕业典礼上所做演讲的节选，我们从中提取出了可供应届毕业生采纳的建议：]]></description>
         </item>
         <item>
-            <title><![CDATA[world]]></title>
-            <link>https://51hpz.cn/blog/world</link>
-            <guid>world</guid>
+            <title><![CDATA[开发的三大难]]></title>
+            <link>https://51hpz.cn/blog/thirdhard</link>
+            <guid>thirdhard</guid>
             <pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate>
-            <description><![CDATA[react学习]]></description>
+            <description><![CDATA[程序员一般遇到这三种项目都会脑袋痛，改造，重构，迁移。因为它们都属于改动大，又很容易出问题的项目，但是对业务的价值又很阐述（主要是针对业务驱动型的公司，对于技术驱动型的公司比较好解释）。下面我结合一条小路详细给大家解释一下这三种技术难点]]></description>
+        </item>
+        <item>
+            <title><![CDATA[新的起点，博客重开张]]></title>
+            <link>https://51hpz.cn/blog/start</link>
+            <guid>start</guid>
+            <pubDate>Wed, 30 Jan 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[作为一个刚过35岁的程序员，回首过去，突然发现自己在互联网并没有留下什么，这并不是自己的初忠。总结过去就是自己的惰性太强了。其实在大学的时候自己就已经搭建了自己的独立技术博客，但是断断续续写写停停，博客技术用了很多WordPress，Jekyll、Hugo、Hexo，但是内容沉淀确很少。下一个十年已经开始，希望从现在开始，克服懒惰，持续的输入和输出，构建自己的未来的人生体系。]]></description>
         </item>
     </channel>
 </rss>
