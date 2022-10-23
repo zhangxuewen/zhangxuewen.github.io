@@ -17,7 +17,7 @@ const FeatureList = [
   },
   {
     title: "Apache Pulsar",
-    image: "https://pulsar.apache.org/zh-CN/assets/images/pulsar-system-architecture-6890df6b0c59a065a56492659ba87933.png",
+    image: "",
     earned: "一个分布式的消息发布/订阅传递平台，具有非常灵活地消息模型和一个直观的客户端API",
     link: "/docs/opensource/plusar/about",
   },

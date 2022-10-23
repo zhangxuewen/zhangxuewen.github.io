@@ -20,15 +20,15 @@ const config = {
     },
     navbar,
     footer,
-    algolia: {
-      apiKey: 'e019b7d51c61cf4ecd39398f71093afc',
-      indexName: '51hpz',
-      appId:'NIWOCWU1XK',
-      contextualSearch: true,
-      rateLimit: 8,
-      maxDepth: 10,
+    //algolia: {
+    //  apiKey: 'e019b7d51c61cf4ecd39398f71093afc',
+    //  indexName: '51hpz',
+    //  appId:'NIWOCWU1XK',
+    //  contextualSearch: true,
+    //  rateLimit: 8,
+    //  maxDepth: 10,
 
-    }
+    //}
     
   },
   presets: [
@@ -37,18 +37,18 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./config/sidebars.js'),
-          editUrl:'https://github.com/ice-lab/site/edit/master/',
+          editUrl:'https://github.com/zhangxuewen/zhangxuewen.github.io/tree/main/',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/ice-lab/site/edit/master/',
+          editUrl: 'https://github.com/zhangxuewen/zhangxuewen.github.io/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
         gtag: {
           trackingID: 'G-ZZHPHMRETL',
-        }
+        },
       },
     ],
   ],
@@ -64,16 +64,23 @@ config.plugins.push([
       routeBasePath:'contentweekly',
     },
 ]);
+config.plugins.push([
+  require.resolve("@easyops-cn/docusaurus-search-local"),
+  {
+    hashed: true,
+    //editUrl: 'https://github.com/zhangxuewen/zhangxuewen.github.io/tree/main/',
+  },
+]);
 if (process.env.USE_LOCAL_SEARCH) {
   // 内部站点无法使用 algolia
-  delete config.themeConfig.algolia;
-  config.plugins.push([
-    require.resolve("@easyops-cn/docusaurus-search-local"),
-    {
-      hashed: true,
-      editUrl: 'https://github.com/ice-lab/data/edit/master/',
-    },
-  ]);
+  //delete config.themeConfig.algolia;
+  //config.plugins.push([
+  //  require.resolve("@easyops-cn/docusaurus-search-local"),
+  //  {
+  //    hashed: true,
+  //    editUrl: 'https://github.com/ice-lab/data/edit/master/',
+   // },
+  //]);
 }
 
 module.exports = config;

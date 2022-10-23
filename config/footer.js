@@ -2,7 +2,7 @@ module.exports = {
   style: 'dark',
   links: [
     {
-      title: '专题',
+      title: '知识库',
       items: [
        
         {
