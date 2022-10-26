@@ -13,9 +13,12 @@
         <link href="https://51hpz.cn/contentweekly/welcome"/>
         <updated>2020-05-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[思考与学习]]></summary>
+        <content type="html"><![CDATA[<p>思考与学习</p>]]></content>
         <author>
             <name>Benno Dev</name>
             <uri>https://github.com/bennodev19</uri>
         </author>
+        <category label="hello1" term="hello1"/>
+        <category label="agile1" term="agile1"/>
     </entry>
 </feed>

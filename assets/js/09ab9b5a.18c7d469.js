@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[9626],{8874:function(e){e.exports=JSON.parse('{"allTagsPath":"/contentweekly/tags","slug":"/contentweekly/tags/agile-1","name":"agile1","count":1,"permalink":"/contentweekly/tags/agile-1"}')}}]);
